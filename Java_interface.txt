@@ -1,0 +1,34 @@
+ ******* Interface **********
+ 
+ ==> Interface is a reference type is java. It specifies the behaviour of the class like what to do not how to do.
+ ==> It is a  collection of only abstarct methods( only method signature ,no body).
+ ==> class implements interface.
+ ==> How an interface different from a class.
+      ==> you cannot initiate interface.
+	  ==> interface does not contain any interface.
+	  ==> all methods are abstract.
+	  ==> An interface cannot contain instance fields. The only fiels that can appear are
+	       either declared both static and final.
+	 ==> An interface is not extended by a class( that means we canot inherit interface classes), it is implemented.
+	 ==> An interface can extend multiple interface classes.
+	 
+==> interface keyword is used declare an interface class.
+==> methods in interface class are implicity abstract and public. Hence you need not give any keyword abstract for the method. 
+==> class that implements the interface should define all the abstract mehods defined in interface class.
+                                                (OR) we can simply say that
+	If a class implements an interface, it is implicity agree to implement all methods/behaviours of interface class.
+
+==> Used to acieve multiple inheritance which cannot be done using extend keyword.
+
+==> public interface class_name{
+        // Any no of static/ final fields
+		// Any no of abstract methods.
+       }
+	   
+==> Rules overridding methods defined in interfaces::
+     => signature and return type should be maintained same.
+	 ==> an interface class can implement  otherinterface class.==> 	 
+==> if a class implementing an interface class need follow few rules:
+    ==> A class can implement more than 1 interface class.
+    ==> A class can extend only one class but A class can implement more than 1 interfaces classes. 
+   ==>	

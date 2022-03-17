@@ -1,0 +1,88 @@
+ ***** OOPS ***********
+ 
+ object is a bundle of data nad logic(code)
+ 
+ class is a blueprint of an object
+ 
+ class attributes also called as fields, object attributes,instance variables, properties.
+ 
+ class methods also called as functions
+ 
+ 
+ *********************** ENCAPSULATION ***********************************
+ 
+ ==> Encapsulation is hiding data/code or  wrapping up the data/code  ==> simply data hiding.
+ ==>  means variables/code of class are hidden to other classes.
+ ==> To acheve encapsulation in JAVA
+     => declare variables in private and provide public getter and setter methods.
+==> Benefits of Encapsulation ==> class has total over what is being stored in its fields
+
+
+*************** INHERITANCE ***********************************
+
+==> One class(child) acquires the propeties of the other class(parent). ==> In simple child class can access
+    properties and methods of the parent class but there are few cases where child cannot inherit/access parent class
+	lets discuss below/ further.
+==> child class is also called as derived class,subclass
+==> parent class is also called as base class , superclass
+==> ** EXTENDS ** is the keyword used to inherit.
+==> **** NOTE : Constructors are not members of the class hence these cannot be inherited.
+    but constructor of parent class can be invoked by the child class.
+	  
+==> ****** Following below code will not compile
+
+       class Horse {
+                    private int age;
+                    Horse(int age) {
+                                    this.age = age;
+                                   }
+                    }
+
+       class Pony extends Horse {
+        private int age;
+        Pony(int age) { //here compiler complains about no default constructor in parent class
+                     this.age = age;
+                       }
+                   }  
+				   
+	   ==> Why ??? => the sub class constructor must invoke the super class constructor. If we dont the compiler
+	        will call the no-args constructor of super class for you. Here there is no arg constructor hence we are getting the error
+       ==> How to fix this give 
+	   
+	        class pony extends Horse{ 
+			                    Pony(int age){
+								              super(age);
+								             }
+								}
+
+==> The Super Key word::
+   ==> super key word is like this key word . Where it is used??
+       ==> if we have variables  or methods with similar name => we use super keyword.
+	   ==> used to invoke super class/parent class constructor.
+	   
+==> Inheitance , extents key word gives a IS-A relation.
+     ==> Example:
+	   class Animal{}
+	   class mammal extends Animal(){}  ==> mammal IS-A animal
+	   class reptile extends Animal(){}  ==> reptile IS-A animal
+	   class Dog extends Mammal(){}    ==> Dog IS-A animal and also DOG IS-A mammal
+==> Instance keyword ==> gives true if IS-A relationship is satisfied.
+    ==> Example(from above)
+        Animal A = new Animal();
+        Mammal M = new Mammal();
+		Dog D = new Dog();
+       
+        System.out.println( M instance Animal)  => true	   
+		System.out.println( D instance Animal)  => true	   
+	   
+==>  Types of inheritance
+     ==> Single Inheritance :: A -> B
+	 ==> Muli level Inheritance :: A -> B -> C
+	 ==> Hierarchical Inhertance ::     A-> B ; A-> C ( parent having more children)
+	 ==> Multiple Inhertance :: A -> B; C -> B ( children(B) having more than one parent(A,C) *** this is not supported in JAVA ****
+	 
+	 ==> In subclass we can over ride the methods of super class
+	 
+	 
+	 
+	 
