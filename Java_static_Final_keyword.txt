@@ -1,0 +1,69 @@
+******* static keyword ************
+
+==> Static keyword can be for variable, method , class
+
+==> In Java Static keyword is mainly used for memmory management.
+
+==> Static variable::
+
+    Understanding the problem without static:
+    ==> class Student{
+	                 int rollno;
+					 String name;
+					 String college = "IBO";
+	                 }
+   ==> If there are 10000 students in a school. When each instance is created memory gets allacated.
+       All students are unique hence fields rollno, name will be unique. But college is common for all instances.
+       and memory allocation for this everytime is a waste. we use static key word in this instance for 
+       memory utilization.
+
+==> Static Method:
+    
+	 ==> Static method belongs to the class instaed of the object.
+	 ==> **** static method in the class can be called even before initializing the object.
+	      Example ::
+		  class student{
+		  public static void display(){ System.out.println("IM in static method display of student class")}
+		  }
+	      
+		  public static void main(){
+		     Student.display(); // will print the statement:: need not initialize the student object
+		  }
+
+	  ==> Static method can access/change only static varables. can only call other static methods. non-static methods cannot
+	       be called from these methods.
+
+==> Why Java main method is static?
+    ==> It is because object is not required to call the static method. and resolves the problem of memory allocation.
+	
+
+************************  FINAL KEY WORD ****************
+
+==> similar to constant
+    ==> cannot be changed ===> for a final variables
+	==> cannot be inherited/extend ===> for a final class
+	==> cannot be overriden ===> for a final method
+	
+==> final variable can be static, protected , private or public.
+
+==> ** If there is a blank final variable declared but not initialized. Then it can be only 
+    initialized in constructor .
+	==> class Student{
+	     final String college_name;
+		
+		Student(String college){
+		   college_name = college;
+		}
+	}
+
+===> ** Similarly as above if the variable that is static, final has been declared but not initialized.
+     can be declared only in statc methods.
+	 ==> class Student{
+	     final static String college_name;
+		
+		       static give_value(){
+		        college_name = "IBO";
+		   }
+	    }
+
+	 

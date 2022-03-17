@@ -1,0 +1,48 @@
+*************  Java abstraction ***************
+
+==> In oops the abstraction is the process of hididng implementation details from user. In other words the user knows what that does
+    instead how it does.
+	
+==> In java abstarction is achieved using Abstract classes and interfaces.
+==> abstract keyword is used while declaring abstract classes.
+==> If the class has 1 abstract method it should be declared abstract.
+==> abstract classes cannot be instantiated like interface classes.
+==> Just like interface if you inherit abstract class, you have to provide the implementation of all the methods.
+
+
+==> Abstarct method ==> doesnt have any logic.
+==> public abstract void play()
+
+==> Declaring a method abstarct has 2 consequences
+    ==> class containing the method must be abstarct.
+	==> Any class inheriting this class having abstract method must implement the method in it.
+	
+==>    Both Abstarct class and interface class are meant for abstraction. Lets see the difference.
+
+
+        ==> Type of methods:
+		    ==> Interface can have onlt abstract methods.
+			==> Abstact class can have both abstract and non abstract methods.
+			
+		==> Type of variables:
+		    ==> Interface can have only final or static variables. variables declared are default considered as final 
+			==> In Abstarct classs we can have => final, non-final, static, non-static variables.
+			
+		==> Implementation:
+		    ==> Abstarct class can provide the implementation of interface class methods.
+			==> Interface class cannot provide any implementation.
+			
+		==> Keywords to use the class :
+		    ==> If a class wanna use interface class => implements keyword is used
+			      class A implements class B
+			==> If a class wanna use abstract class => extends keyword is used.
+			      class A extends class B
+				  
+		==> Multiple implementations:
+		     ==> An interface class can extend only an interface class.
+			 ==> an abstarct class can extend another java class and implement multiple interface classes.
+			 
+		==> Acceesibility of data members :
+		     ==> Memenbers in interface class are all/ always public.
+			 ==> Members in abstract class maybe public, private, protected. etc
+	

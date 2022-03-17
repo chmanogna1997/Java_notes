@@ -1,0 +1,40 @@
+***************  JAVA method overriding ************
+
+==> the subclass can override the method present in its parent class.
+==> overiding means not extending the logic but completley changing the logic of the method.
+==> You cannot override a method that is declared final.
+==> we can have multilevel overriding.
+==> Lets see an interesting example::
+      
+	   class Animal {
+	      public void move(){ System.out.println("Animal can move");}
+	    }
+		
+		class Dog extends Animal(){
+		@override
+		public void move(){System.out.println(" Dog can move");}
+		
+		public void bark() {System.out.println("Dog can bark")}
+		}
+		
+		public ststic void main(){
+		Animal A = new Animal();
+		Animal D = new Dog(); ///  check here 
+		
+		A.move() // OUTPUT :: Animal can move.
+		
+		D.move() // OUTPUT: DOG can move.
+		
+		D.bark() // ***** this gives compilation error as D is animal reference type and doesnot have bark() method in it.
+		                  and this is called polymorphism.
+		}
+		
+==> Rules for overriding:
+    ==> If the method is not inherited we cannot ovverride it.
+	==> ***** we cannot ovver ride static , final , private blocks and constructors.
+	==> If method is declared public in superclass, it cannot be declared private or protected in subclass
+	     private > protected > public.
+	==> If method is protected in superclass => it can be declared public/protected but not private.
+	==> Overriding method should have the same return type.
+	==> abstract methods in abstract class and interface class are meant to be overriden.
+	
