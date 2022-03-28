@@ -1,0 +1,44 @@
+***** imp points ***********
+
+==> You cannot have 2 public classes within the same java file ==> it throws error
+     Example: 
+	 
+	 public class shape{} // this throws error as we cannot have 2 public classes in same file.
+	 public class main{
+	  public static void main() {
+	    .....
+	  }
+	 }
+	 
+	 
+
+
+==> static vs global variable
+ static keyword => we can add access keywords like private and public . variable with static and public is similar to global variable
+==> use of static keyword
+  Static keyword ==> mainly used for memory management 
+==> Static method restrictions
+in static method we can only access static variables and static methods directly. we cannot refer this, .super 
+==>call nested classes
+outer_class{
+  inner_class{
+    ......
+  }
+}
+the initate inner class we need to initiate outer class
+class_six.six_Sub C6_sub = C6.new six_Sub();
+
+outer_class.inner_class I = new O.new inner_class
+
+==> to access private class
+
+  Method M = class_four.class.getDeclaredMethod("display_class",null);
+
+        M.setAccessible(true);
+        M.invoke(C4);
+		
+ libraries used ==> 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+===> 
