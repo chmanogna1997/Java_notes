@@ -1,0 +1,74 @@
+===> Java Regex
+
+==> Learning links:
+
+   https://www.tutorialspoint.com/java/java_regular_expressions.htm 
+
+https://docs.oracle.com/javase/tutorial/essential/regex/
+
+https://www.vogella.com/tutorials/JavaRegularExpressions/article.html
+
+https://www.javatpoint.com/java-regex
+
+https://www.geeksforgeeks.org/regular-expressions-in-java/
+
+
+==> regex online : 
+
+https://www.regexplanet.com/advanced/java/index.html
+
+https://www.freeformatter.com/java-regex-tester.html 
+
+
+
+==> Java provides : Java.util.regex for pattern matching in regex
+     ==> Java.util.package usually consists of 3 classes:
+	     ==> pattern class(need to invoke compile()); matcher class(need to invoke matcher()method);
+		 
+    ==> Example:
+
+    String line = "this is mona";
+	String pattern = "(.*)";
+	
+	// create pattern object::
+	Pattern p = Pattern.compile(pattern);
+	
+	// create matcher object::
+	Matcher m = p.matcher(line);
+	
+	System.out.println(m.find())
+	
+	
+==> .start(), .end() ==> Index methods:::
+    ==> .start() ==> gives the index of the match
+	==> .end() ==> gives the index of the last character in the match.
+   ==> see example : https://www.tutorialspoint.com/java/java_regular_expressions.htm
+   
+
+==> Study Methods: 
+   ==> lookingAt() => Attempts to match input sequences, starting at the string, against the pattern.
+   ==> find()  ==> Attempts to find the next subsequence of the input string
+   ==> matches()  ==> matches entire region with the pattern
+   
+   
+==> methods : replceFirst, Replace All
+
+   ==> String line = "this is a dog";
+       String pattern = "dog";
+	   String replace = "cat";
+	   
+	   Pattern p = Pattern.compile(pattern);
+	   
+	   Matcher m = p.matcher(line);
+	   line =  m.replaceALL(replace);
+	   System.out.println(line) :: // This is cat;
+	
+	
+==> append replacement and append tail methods from matcher class::::
+
+   ==> Example: https://www.tutorialspoint.com/java/java_regular_expressions.htm
+   
+   
+   
+      
+   
